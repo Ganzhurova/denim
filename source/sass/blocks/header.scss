@@ -16,13 +16,8 @@
 }
 
 .header__logo {
-  padding: 0 20px;
-}
-
-.header__logo,
-.header__nav,
-.header__user-nav {
   flex-shrink: 0;
+  padding: 0 20px;
 }
 
 .header--index {
@@ -31,7 +26,8 @@
   overflow-x: hidden;
 
   .header__navbar {
-    flex-wrap: wrap;
+    min-height: 80px;
+    padding-bottom: 10px;
   }
 
   .header__logo {
@@ -64,15 +60,6 @@
     &::after {
       left: 100%;
     }
-  }
-
-  .header__nav,
-  .header__user-nav {
-    display: flex;
-    align-items: center;
-    min-height: 80px;
-
-    line-height: 30px;
   }
 
   .header__user-nav {
