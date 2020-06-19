@@ -15,3 +15,34 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@mixin extrabold {
+  font-family: "Work Sans", "Arial", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin container {
+  min-width: 290px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin interaction($size) {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: $size;
+    right: $size;
+    bottom: $size;
+    left: $size;
+  }
+}

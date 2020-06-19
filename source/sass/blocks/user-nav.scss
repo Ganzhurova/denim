@@ -1,0 +1,45 @@
+.user-nav__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.user-nav__item {
+  margin-left: 25px;
+  padding: 5px 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.user-nav__link {
+  position: relative;
+
+  display: block;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+  @include interaction(-10px);
+}
+
+.user-nav__link--search {
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/user-nav/search-icon.svg");
+}
+
+.user-nav__link--basket {
+  width: 18px;
+  height: 16px;
+
+  background-image: url("../img/user-nav/basket-icon.svg");
+}

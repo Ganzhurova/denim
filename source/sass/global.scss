@@ -1,12 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
 
   @include medium;
+  color: $text-dark;
+  background-color: $white;
 }
 
-a:hover,
-a:focus {
+a {
   text-decoration: none;
 }
 

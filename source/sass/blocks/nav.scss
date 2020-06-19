@@ -1,0 +1,62 @@
+.nav__button {
+  width: 20px;
+  height: 10px;
+
+  span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: $black;
+
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.nav__list {
+  @include reset-list;
+
+  display: flex;
+}
+
+.nav__link {
+  font-size: 16px;
+  color: $text-dark;
+}
+
+.nav__link[href] {
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.nav--index {
+  .nav__item {
+    margin-right: 25px;
+  }
+}
+
+.nav--inner {
+  .nav__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: none;
+    flex-direction: column;
+    min-width: 320px;
+    width: 100%;
+
+    background-color: $white;
+  }
+
+  .nav__list--active {
+    display: flex;
+  }
+}

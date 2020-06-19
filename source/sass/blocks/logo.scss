@@ -1,0 +1,13 @@
+.logo {
+  @include extrabold;
+  font-size: 24px;
+  color: $text-dark;
+}
+
+.logo[href] {
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+}
