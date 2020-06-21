@@ -1,3 +1,8 @@
+.user-nav--inner {
+  flex-grow: 1;
+  width: 30%;
+}
+
 .user-nav__list {
   @include reset-list;
 

@@ -9,7 +9,10 @@ $retina-dppx: 1.5dppx;
 //colors
 $white: #ffffff;
 $black: #151c22;
+$lightgrey: #f1f2f4;
+$grey: #727a82;
 
 $text-dark: $black;
+$text-light: $grey;
 
-$bg-light: #f1f2f4;
+$bg-light: $lightgrey;

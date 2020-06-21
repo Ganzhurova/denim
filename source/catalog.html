@@ -17,25 +17,57 @@
               Nîmes
             </a>
           </div>
-          <nav class="header__nav nav nav--inner">
-            <div class="nav__button">
-              <span></span>
-              <span></span>
-              <span></span>
+          <nav class="header__nav nav nav--inner nav--active" role="navigation">
+            <div class="nav__wrapper">
+              <div class="nav__header">
+                <p class="nav__title">Menu</p>
+                <div class="nav__button nav__button--open">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span class="visually-hidden">Open menu</span>
+                </div>
+                <div class="nav__button nav__button--close">
+                  <span>Close</span>
+                </div>
+              </div>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <input class="nav__input visually-hidden" id="woman" type="checkbox">
+                  <label class="nav__category" for="woman">
+                    Woman
+                  </label>
+                  <ul class="nav__sub">
+                    <li class="nav__sub-item">
+                      <a class="nav__sub-link" href="#">All</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a class="nav__sub-link" href="#">Shirt</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a class="nav__sub-link nav__sub-link--active">Jacket</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a class="nav__sub-link" href="#">Trousers</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a class="nav__sub-link" href="#">Skirt</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a class="nav__sub-link" href="#">New</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Man</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">New</a>
+                </li>
+              </ul>
             </div>
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link">Woman</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Man</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">New</a>
-              </li>
-            </ul>
           </nav>
-          <div class="header__user-nav user-nav">
+          <div class="header__user-nav user-nav user-nav--inner">
             <ul class="user-nav__list">
               <li class="user-nav__item">
                 <a class="user-nav__link user-nav__link--search" href="#">
