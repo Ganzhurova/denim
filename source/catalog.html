@@ -10,33 +10,26 @@
   </head>
   <body>
     <header class="header header--inner">
-      <div class="header__wrapper">
-        <div class="header__navbar">
+      <div class="container">
+        <div class="header__navbar header__navbar--inner">
           <div class="header__logo">
             <a class="logo" href="index.html">
               Nîmes
             </a>
           </div>
-          <nav class="header__nav nav nav--inner nav--active" role="navigation">
+          <nav class="header__nav header__nav--inner nav nav--inner nav--active">
             <div class="nav__wrapper">
               <div class="nav__header">
-                <p class="nav__title">Menu</p>
-                <div class="nav__button nav__button--open">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                <h2 class="nav__title">Menu</h2>
+                <button class="nav__button" type="button">
                   <span class="visually-hidden">Open menu</span>
-                </div>
-                <div class="nav__button nav__button--close">
-                  <span>Close</span>
-                </div>
+                </button>
               </div>
               <ul class="nav__list">
-                <li class="nav__item">
-                  <input class="nav__input visually-hidden" id="woman" type="checkbox">
-                  <label class="nav__category" for="woman">
+                <li class="nav__item nav__item--dropdown nav__item--active">
+                  <a class="nav__category">
                     Woman
-                  </label>
+                  </a>
                   <ul class="nav__sub">
                     <li class="nav__sub-item">
                       <a class="nav__sub-link" href="#">All</a>
@@ -44,8 +37,8 @@
                     <li class="nav__sub-item">
                       <a class="nav__sub-link" href="#">Shirt</a>
                     </li>
-                    <li class="nav__sub-item">
-                      <a class="nav__sub-link nav__sub-link--active">Jacket</a>
+                    <li class="nav__sub-item nav__sub-item--active">
+                      <a class="nav__sub-link">Jacket</a>
                     </li>
                     <li class="nav__sub-item">
                       <a class="nav__sub-link" href="#">Trousers</a>
@@ -58,11 +51,10 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav__item">
-                  <input class="nav__input visually-hidden" id="man" type="checkbox">
-                  <label class="nav__category" for="man">
+                <li class="nav__item nav__item--dropdown">
+                  <a class="nav__category">
                     Man
-                  </label>
+                  </a>
                   <ul class="nav__sub">
                     <li class="nav__sub-item">
                       <a class="nav__sub-link" href="#">All</a>
@@ -82,27 +74,9 @@
                   </ul>
                 </li>
                 <li class="nav__item">
-                  <input class="nav__input visually-hidden" id="new" type="checkbox">
-                  <label class="nav__category" for="new">
+                  <a class="nav__category" href="#">
                     New
-                  </label>
-                  <ul class="nav__sub">
-                    <li class="nav__sub-item">
-                      <a class="nav__sub-link" href="#">All</a>
-                    </li>
-                    <li class="nav__sub-item">
-                      <a class="nav__sub-link" href="#">Casual</a>
-                    </li>
-                    <li class="nav__sub-item">
-                      <a class="nav__sub-link" href="#">Petite</a>
-                    </li>
-                    <li class="nav__sub-item">
-                      <a class="nav__sub-link" href="#">Classic</a>
-                    </li>
-                    <li class="nav__sub-item">
-                      <a class="nav__sub-link" href="#">Soulluxe</a>
-                    </li>
-                  </ul>
+                  </a>
                 </li>
               </ul>
             </div>

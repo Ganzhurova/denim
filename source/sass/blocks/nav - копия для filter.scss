@@ -1,0 +1,225 @@
+.nav__title {
+  display: none;
+}
+
+.nav__button {
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.nav__button--open {
+  width: 20px;
+  height: 10px;
+
+  span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background-color: $black;
+
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.nav__button--close {
+  display: none;
+}
+
+.nav__list {
+  @include reset-list;
+
+  display: flex;
+}
+
+.nav__input {
+  &:not(:checked) {
+    ~ .nav__sub {
+      max-height: 0;
+
+      opacity: 0;
+
+      transition: max-height 1000ms, opacity 1000ms;
+
+      overflow: hidden;
+    }
+  }
+
+  &:checked {
+    ~ .nav__sub {
+      max-height: 150px;
+
+      opacity: 1;
+
+      transition: max-height 1000ms, opacity 1000ms;
+    }
+  }
+}
+
+// .nav__item:hover > .nav__sub,
+// .nav__sub:hover {
+//   max-height: 150px;
+// }
+
+.nav__category {
+  font-size: 16px;
+  line-height: 30px;
+  color: $text-dark;
+
+  cursor: pointer;
+}
+
+.nav__sub {
+  @include reset-list;
+
+  // position: absolute;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__sub-item {
+  padding: 4px 0 10px;
+  margin-bottom: 10px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.nav__sub-link {
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-light;
+
+  &--active {
+    color: $text-dark;
+  }
+
+  &[href] {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $text-dark;
+    }
+  }
+}
+
+.nav--index {
+  .nav__list {
+    flex-wrap: wrap;
+  }
+
+  .nav__item {
+    margin-right: 25px;
+  }
+}
+
+.nav--inner {
+  flex-grow: 1;
+  width: 30%;
+
+  .nav__list {
+    display: none;
+  }
+}
+
+.nav--active {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 1;
+
+  min-width: 320px;
+  width: 100%;
+
+  background-color: $white;
+
+  overflow: hidden;
+
+  .nav__wrapper {
+    @include container;
+  }
+
+  .nav__header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    min-height: 63px;
+
+    border-bottom: 2px solid $lightgrey;
+
+    @include line(2px, $lightgrey);
+
+    &::before,
+    &::after {
+      bottom: -2px;
+    }
+  }
+
+  .nav__title {
+    display: block;
+    margin: 0;
+    margin-left: 50%;
+
+    @include bold;
+    font-size: 18px;
+
+    transform: translateX(-50%);
+  }
+
+  .nav__button--open {
+    display: none;
+  }
+
+  .nav__button--close {
+    display: block;
+    margin-left: auto;
+
+    font-size: 14px;
+    text-align: right;
+  }
+
+  .nav__list {
+    display: block;
+  }
+
+  .nav__item {
+    position: relative;
+
+    border-bottom: 2px solid $lightgrey;
+
+    @include line(2px, $lightgrey);
+
+    &::before,
+    &::after {
+      bottom: -2px;
+    }
+  }
+
+  .nav__category {
+    position: relative;
+
+    display: block;
+    padding: 7.5px 0;
+
+    @include arrow;
+  }
+
+  .nav__input:checked {
+    ~ .nav__category {
+      @include arrow-top;
+    }
+  }
+
+  .nav__sub {
+    position: static;
+  }
+}

@@ -18,12 +18,6 @@
   font-weight: 800;
 }
 
-@mixin container {
-  min-width: 290px;
-  width: 90%;
-  margin: 0 auto;
-}
-
 @mixin reset-list {
   margin: 0;
   padding: 0;

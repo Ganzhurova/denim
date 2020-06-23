@@ -10,20 +10,19 @@
   </head>
   <body>
     <header class="header header--index">
-      <div class="header__wrapper">
-        <div class="header__logo">
+      <div class="container">
+        <div class="header__logo header__logo--index">
           <a class="logo">
             Nîmes
           </a>
         </div>
-        <div class="header__navbar">
-          <nav class="header__nav nav nav--index" role="navigation">
+        <div class="header__navbar header__navbar--index">
+          <nav class="header__nav nav nav--index">
             <ul class="nav__list">
-              <li class="nav__item">
-                <input class="nav__input visually-hidden" id="woman" type="checkbox">
-                <label class="nav__category" for="woman">
+              <li class="nav__item nav__item--active">
+                <a class="nav__category">
                   Woman
-                </label>
+                </a>
                 <ul class="nav__sub">
                   <li class="nav__sub-item">
                     <a class="nav__sub-link" href="#">All</a>
@@ -46,10 +45,9 @@
                 </ul>
               </li>
               <li class="nav__item">
-                <input class="nav__input visually-hidden" id="man" type="checkbox">
-                <label class="nav__category" for="man">
+                <a class="nav__category">
                   Man
-                </label>
+                </a>
                 <ul class="nav__sub">
                   <li class="nav__sub-item">
                     <a class="nav__sub-link" href="#">All</a>
@@ -69,31 +67,13 @@
                 </ul>
               </li>
               <li class="nav__item">
-                <input class="nav__input visually-hidden" id="new" type="checkbox">
-                <label class="nav__category" for="new">
+                <a class="nav__category">
                   New
-                </label>
-                <ul class="nav__sub">
-                  <li class="nav__sub-item">
-                    <a class="nav__sub-link" href="#">All</a>
-                  </li>
-                  <li class="nav__sub-item">
-                    <a class="nav__sub-link" href="#">Casual</a>
-                  </li>
-                  <li class="nav__sub-item">
-                    <a class="nav__sub-link" href="#">Petite</a>
-                  </li>
-                  <li class="nav__sub-item">
-                    <a class="nav__sub-link" href="#">Classic</a>
-                  </li>
-                  <li class="nav__sub-item">
-                    <a class="nav__sub-link" href="#">Soulluxe</a>
-                  </li>
-                </ul>
+                </a>
               </li>
             </ul>
           </nav>
-          <div class="header__user-nav user-nav">
+          <div class="header__user-nav header__user-nav--index user-nav">
             <ul class="user-nav__list">
               <li class="user-nav__item">
                 <a class="user-nav__link user-nav__link--search" href="#">
