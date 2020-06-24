@@ -57,20 +57,9 @@
 }
 
 .nav__item {
-  padding: 10px 0;
   margin-right: 25px;
 
-  cursor: pointer;
-
   &--active {
-    .nav__category {
-      opacity: 0.5;
-    }
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
     .nav__category {
       opacity: 0.5;
     }
@@ -88,11 +77,20 @@
 }
 
 .nav__category {
+  display: block;
+  padding: 10px 0;
+
   font-size: 16px;
   line-height: 30px;
   color: $text-dark;
 
   cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .nav__sub {
@@ -105,6 +103,7 @@
   display: none;
   flex-wrap: wrap;
   height: 0;
+  padding-bottom: 10px;
 
   background-color: $white;
 
@@ -120,10 +119,6 @@
 }
 
 .nav__sub-item {
-  padding: 10px 0;
-
-  cursor: pointer;
-
   &--active {
     .nav__sub-link {
       color: $text-dark;
@@ -133,20 +128,23 @@
   &:not(:last-child) {
     margin-right: 30px;
   }
-
-  &:hover,
-  &:active,
-  &:focus {
-    .nav__sub-link[href] {
-      color: $text-dark;
-    }
-  }
 }
 
 .nav__sub-link {
+  display: block;
+  padding: 4px 0 10px;
+
   font-size: 14px;
   line-height: 18px;
   color: $text-light;
+
+  &[href] {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $text-dark;
+    }
+  }
 }
 
 .nav--index {
@@ -192,13 +190,10 @@
       align-items: center;
       min-height: 63px;
 
-      border-bottom: 2px solid $lightgrey;
+      &::before {
+        @include line(2px, $lightgrey);
 
-      @include line(2px, $lightgrey);
-
-      &::before,
-      &::after {
-        bottom: -2px;
+        bottom: 0;
       }
     }
 
@@ -238,15 +233,13 @@
     .nav__item {
       position: relative;
 
-      padding: 0;
       margin: 0;
 
       border-bottom: 2px solid $lightgrey;
 
-      @include line(2px, $lightgrey);
+      &::before {
+        @include line(2px, $lightgrey);
 
-      &::before,
-      &::after {
         bottom: -2px;
       }
 
@@ -254,7 +247,9 @@
         .nav__category {
           position: relative;
 
-          @include arrow;
+          &::before {
+            @include arrow;
+          }
         }
       }
 
@@ -267,28 +262,20 @@
           }
         }
       }
-
-      &:hover,
-      &:active {
-        .nav__category {
-          opacity: 1;
-        }
-      }
     }
 
     .nav__category {
       display: block;
-      padding: 7.5px 0;
+      padding: 7.5px 0 7.5px;
+
+      &:hover,
+      &:active {
+        opacity: 1;
+      }
     }
 
     .nav__sub {
       position: static;
-
-      padding-bottom: 10px;
-    }
-
-    .nav__sub-item {
-      padding: 4px 0 10px;
     }
   }
 }
