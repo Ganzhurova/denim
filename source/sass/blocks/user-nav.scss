@@ -4,11 +4,10 @@
 }
 
 .user-nav__list {
-  @include reset-list;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  @include reset-list;
 }
 
 .user-nav__item {
@@ -29,8 +28,8 @@
 
   background-color: transparent;
   background-repeat: no-repeat;
-  background-size: 100%;
   background-position: center;
+  background-size: 100%;
 
   @include interaction(-10px);
 }

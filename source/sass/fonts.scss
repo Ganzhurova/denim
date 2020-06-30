@@ -1,31 +1,43 @@
 @font-face {
-  font-family: "Work Sans";
   font-weight: 400;
+  font-family: "Work Sans";
   font-style: normal;
+  src: local("Work Sans"), local("WorkSans-Regular"),
+    url("../fonts/Worksans.woff2") format("woff2"),
+    url("../fonts/Worksans.woff") format("woff"),
+    url("../fonts/Worksans.ttf") format("truetype");
   font-display: swap;
-  src: local("Work Sans"), local("WorkSans-Regular"), url("../fonts/Worksans.woff2") format("woff2"), url("../fonts/Worksans.woff") format("woff"), url("../fonts/Worksans.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Work Sans";
   font-weight: 500;
+  font-family: "Work Sans";
   font-style: normal;
+  src: local("Work Sans Medium"), local("WorkSans-Medium"),
+    url("../fonts/Worksansmedium.woff2") format("woff2"),
+    url("../fonts/Worksansmedium.woff") format("woff"),
+    url("../fonts/Worksansmedium.ttf") format("truetype");
   font-display: swap;
-  src: local("Work Sans Medium"), local("WorkSans-Medium"), url("../fonts/Worksansmedium.woff2") format("woff2"), url("../fonts/Worksansmedium.woff") format("woff"), url("../fonts/Worksansmedium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Work Sans";
   font-weight: 700;
+  font-family: "Work Sans";
   font-style: normal;
+  src: local("Work Sans Bold"), local("WorkSans-Bold"),
+    url("../fonts/Worksansbold.woff2") format("woff2"),
+    url("../fonts/Worksansbold.woff") format("woff"),
+    url("../fonts/Worksansbold.ttf") format("truetype");
   font-display: swap;
-  src: local("Work Sans Bold"), local("WorkSans-Bold"), url("../fonts/Worksansbold.woff2") format("woff2"), url("../fonts/Worksansbold.woff") format("woff"), url("../fonts/Worksansbold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Work Sans";
   font-weight: 800;
+  font-family: "Work Sans";
   font-style: normal;
+  src: local("Work Sans ExtraBold"), local("WorkSans-ExtraBold"),
+    url("../fonts/Worksansextrabold.woff2") format("woff2"),
+    url("../fonts/Worksansextrabold.woff") format("woff"),
+    url("../fonts/Worksansextrabold.ttf") format("truetype");
   font-display: swap;
-  src: local("Work Sans ExtraBold"), local("WorkSans-ExtraBold"), url("../fonts/Worksansextrabold.woff2") format("woff2"), url("../fonts/Worksansextrabold.woff") format("woff"), url("../fonts/Worksansextrabold.ttf") format("truetype");
 }

@@ -6,10 +6,12 @@ body {
   margin: 0;
   padding: 0;
 
-  @include medium;
-  font-style: normal;
   color: $text-dark;
+  font-style: normal;
+
   background-color: $white;
+
+  @include medium;
 }
 
 a {
@@ -29,18 +31,20 @@ input[type="radio"].visually-hidden {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  overflow: hidden;
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  border: 0;
+
   clip: rect(0 0 0 0);
-  overflow: hidden;
+
+  clip-path: inset(100%);
 }
 
 .container {
-  min-width: 290px;
   width: 90%;
+  min-width: 290px;
   margin: 0 auto;
 }

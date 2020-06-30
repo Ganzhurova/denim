@@ -33,9 +33,9 @@
 }
 
 .nav__list {
-  @include reset-list;
 
   display: flex;
+  @include reset-list;
 }
 
 .nav__input {
@@ -43,11 +43,11 @@
     ~ .nav__sub {
       max-height: 0;
 
+      overflow: hidden;
+
       opacity: 0;
 
       transition: max-height 1000ms, opacity 1000ms;
-
-      overflow: hidden;
     }
   }
 
@@ -68,25 +68,25 @@
 // }
 
 .nav__category {
+  color: $text-dark;
   font-size: 16px;
   line-height: 30px;
-  color: $text-dark;
 
   cursor: pointer;
 }
 
 .nav__sub {
-  @include reset-list;
 
   // position: absolute;
 
   display: flex;
   flex-wrap: wrap;
+  @include reset-list;
 }
 
 .nav__sub-item {
-  padding: 4px 0 10px;
   margin-bottom: 10px;
+  padding: 4px 0 10px;
 
   &:not(:last-child) {
     margin-right: 30px;
@@ -94,9 +94,9 @@
 }
 
 .nav__sub-link {
+  color: $text-light;
   font-size: 14px;
   line-height: 18px;
-  color: $text-light;
 
   &--active {
     color: $text-dark;
@@ -136,12 +136,13 @@
   left: 0;
   z-index: 1;
 
-  min-width: 320px;
   width: 100%;
 
-  background-color: $white;
+  min-width: 320px;
 
   overflow: hidden;
+
+  background-color: $white;
 
   .nav__wrapper {
     @include container;
@@ -169,10 +170,11 @@
     margin: 0;
     margin-left: 50%;
 
-    @include bold;
     font-size: 18px;
 
     transform: translateX(-50%);
+
+    @include bold;
   }
 
   .nav__button--open {

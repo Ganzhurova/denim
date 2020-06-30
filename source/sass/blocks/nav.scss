@@ -9,11 +9,15 @@
   height: 10px;
   padding: 0;
 
+  background-color: $white;
+
   border: 0;
 
   cursor: pointer;
 
-  background-color: $white;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 
   &:hover,
   &:active,
@@ -26,7 +30,6 @@
   }
 
   &::before {
-    content: "";
 
     position: absolute;
     top: 0;
@@ -38,10 +41,8 @@
     background-color: $black;
 
     box-shadow: 0 4px 0 0 $black, 0 8px 0 0 $black;
-  }
 
-  @media (min-width: $tablet-width) {
-    display: none;
+    content: "";
   }
 }
 
@@ -50,10 +51,10 @@
 }
 
 .nav__list {
-  @include reset-list;
 
   display: flex;
   flex-wrap: wrap;
+  @include reset-list;
 }
 
 .nav__item {
@@ -80,9 +81,10 @@
   display: block;
   padding: 10px 0;
 
+  color: $text-dark;
+
   font-size: 16px;
   line-height: 30px;
-  color: $text-dark;
 
   cursor: pointer;
 
@@ -94,7 +96,6 @@
 }
 
 .nav__sub {
-  @include reset-list;
 
   position: absolute;
   top: 100%;
@@ -110,6 +111,7 @@
   opacity: 0;
 
   transition: 0.4s;
+  @include reset-list;
 }
 
 .nav__sub--active {
@@ -134,9 +136,10 @@
   display: block;
   padding: 4px 0 10px;
 
+  color: $text-light;
+
   font-size: 14px;
   line-height: 18px;
-  color: $text-light;
 
   &[href] {
     &:hover,
@@ -170,16 +173,17 @@
     left: 0;
     z-index: 1;
 
-    min-width: 320px;
     width: 100%;
 
-    background-color: $white;
+    min-width: 320px;
 
     overflow: hidden;
 
+    background-color: $white;
+
     .nav__wrapper {
-      min-width: 290px;
       width: 90%;
+      min-width: 290px;
       margin: 0 auto;
     }
 
@@ -191,9 +195,9 @@
       min-height: 63px;
 
       &::before {
-        @include line(2px, $lightgrey);
 
         bottom: 0;
+        @include line(2px, $lightgrey);
       }
     }
 
@@ -202,10 +206,11 @@
       margin: 0;
       margin-left: 50%;
 
-      @include bold;
       font-size: 18px;
 
       transform: translateX(-50%);
+
+      @include bold;
     }
 
     .nav__toggle {
@@ -238,9 +243,9 @@
       border-bottom: 2px solid $lightgrey;
 
       &::before {
-        @include line(2px, $lightgrey);
 
         bottom: -2px;
+        @include line(2px, $lightgrey);
       }
 
       &--dropdown {
