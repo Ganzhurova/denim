@@ -9,7 +9,7 @@ body {
   color: $text-dark;
   font-style: normal;
 
-  background-color: $white;
+  background-color: #5f9ea0;
 
   @include medium;
 }
@@ -47,4 +47,12 @@ input[type="radio"].visually-hidden {
   width: 90%;
   min-width: 290px;
   margin: 0 auto;
+}
+
+.theme-white {
+  background-color: $white;
+}
+
+.theme-lightgrey {
+  background-color: $lightgrey;
 }

@@ -1,5 +1,5 @@
-.nav__title {
-  display: none;
+.nav {
+  padding: 15px 0;
 }
 
 .nav__toggle {
@@ -28,96 +28,56 @@
   &:focus {
     outline: none;
   }
-
-  &::before {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 20px;
-    height: 2px;
-
-    background-color: $black;
-
-    box-shadow: 0 4px 0 0 $black, 0 8px 0 0 $black;
-
-    content: "";
-  }
-}
-
-.nav__toggle--close {
-  display: none;
 }
 
 .nav__list {
-
   display: flex;
   flex-wrap: wrap;
   @include reset-list;
 }
 
 .nav__item {
+  position: relative;
+
   margin-right: 25px;
 
-  &--active {
+  background-color: inherit;
+
+  &:hover {
     .nav__category {
-      opacity: 0.5;
+      color: $text-light;
+    }
+
+    > .nav__sub {
+      display: block;
     }
   }
 }
 
-.nav__item:hover > .nav__sub,
-.nav__sub:hover {
-  display: flex;
-  height: auto;
-
-  opacity: 1;
-
-  transition: 0.4s;
-}
-
 .nav__category {
   display: block;
-  padding: 10px 0;
+  padding: 5px 0;
 
   color: $text-dark;
 
   font-size: 16px;
   line-height: 30px;
-
-  cursor: pointer;
-
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: 0.5;
-  }
 }
 
 .nav__sub {
-
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -20px;
+  z-index: 1;
 
   display: none;
-  flex-wrap: wrap;
-  height: 0;
-  padding-bottom: 10px;
+  width: 150px;
 
-  background-color: $white;
+  background-color: inherit;
 
-  opacity: 0;
+  transition: 0.2s;
 
-  transition: 0.4s;
   @include reset-list;
-}
-
-.nav__sub--active {
-  opacity: 1;
-
-  transition: 0.4s;
 }
 
 .nav__sub-item {
@@ -126,20 +86,16 @@
       color: $text-dark;
     }
   }
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
 }
 
 .nav__sub-link {
   display: block;
-  padding: 4px 0 10px;
+  padding: 10px 20px;
 
   color: $text-light;
 
   font-size: 14px;
-  line-height: 18px;
+  line-height: 20px;
 
   &[href] {
     &:hover,
@@ -150,137 +106,64 @@
   }
 }
 
-.nav--index {
-  .nav__sub {
-    background-color: $bg-light;
-  }
-}
+.nav--closed {
+  .nav__toggle {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
 
-.nav--inner {
+      width: 20px;
+      height: 2px;
+
+      background-color: $black;
+
+      box-shadow: 0 4px 0 0 $black, 0 8px 0 0 $black;
+
+      content: "";
+    }
+  }
+
   .nav__list {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: flex;
+    @media (max-width: $mobile-width-only) {
+      display: none;
     }
   }
 }
 
-@media (max-width: $mobile-width-only) {
-  .nav--active {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    z-index: 1;
+.nav--opened {
+  .nav__toggle {
+    &::before,
+    &::after {
+      position: absolute;
 
-    width: 100%;
+      width: 20px;
+      height: 2px;
 
-    min-width: 320px;
+      background-color: $black;
 
-    overflow: hidden;
-
-    background-color: $white;
-
-    .nav__wrapper {
-      width: 90%;
-      min-width: 290px;
-      margin: 0 auto;
+      content: "";
     }
 
-    .nav__header {
-      position: relative;
+    &::before {
+      box-shadow: none;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .nav__list {
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      top: 100%;
+      left: 0;
 
       display: flex;
-      align-items: center;
-      min-height: 63px;
-
-      &::before {
-
-        bottom: 0;
-        @include line(2px, $lightgrey);
-      }
-    }
-
-    .nav__title {
-      display: block;
-      margin: 0;
-      margin-left: 50%;
-
-      font-size: 18px;
-
-      transform: translateX(-50%);
-
-      @include bold;
-    }
-
-    .nav__toggle {
-      position: static;
-
-      width: auto;
-      height: auto;
-      margin-left: auto;
-
-      &::before {
-        display: none;
-      }
-    }
-
-    .nav__toggle--close {
-      display: block;
-
-      font-size: 14px;
-    }
-
-    .nav__list {
-      display: block;
-    }
-
-    .nav__item {
-      position: relative;
-
-      margin: 0;
-
-      border-bottom: 2px solid $lightgrey;
-
-      &::before {
-
-        bottom: -2px;
-        @include line(2px, $lightgrey);
-      }
-
-      &--dropdown {
-        .nav__category {
-          position: relative;
-
-          &::before {
-            @include arrow;
-          }
-        }
-      }
-
-      &--active {
-        .nav__category {
-          opacity: 1;
-
-          &::before {
-            transform: rotate(-135deg);
-          }
-        }
-      }
-    }
-
-    .nav__category {
-      display: block;
-      padding: 7.5px 0 7.5px;
-
-      &:hover,
-      &:active {
-        opacity: 1;
-      }
-    }
-
-    .nav__sub {
-      position: static;
+      width: 100%;
+      padding: 15px 20px;
     }
   }
 }

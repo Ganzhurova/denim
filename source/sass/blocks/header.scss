@@ -1,15 +1,5 @@
 .header {
-  position: relative;
-
   min-width: 320px;
-
-  background-color: $white;
-}
-
-.header--index {
-  // overflow-x: hidden;
-
-  background-color: $bg-light;
 }
 
 .header__logo {
@@ -39,29 +29,27 @@
 .header__navbar {
   display: flex;
   align-items: center;
-
-  @media (min-width: $tablet-width) {
-    position: relative;
-  }
+  min-height: 67px;
 }
 
 .header__navbar--index {
-  position: relative;
-
   margin-top: 57px;
-  margin-bottom: 20px;
-
-  background-color: $bg-light;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
   }
 }
 
-.header__navbar--inner {
-  min-height: 67px;
+.header__navbar-wrapper {
+  position: relative;
 
-  background-color: $white;
+  display: flex;
+  align-items: center;
+}
+
+.header__nav {
+  margin-right: auto;
 }
 
 .header__nav--inner {
@@ -70,14 +58,13 @@
   width: 30%;
 }
 
-.header__user-nav--index {
+.header__user-nav--inner {
   flex-grow: 1;
   width: 30%;
-  margin-left: auto;
 }
 
 .main {
   height: 400px;
 
-  background-color: yellow;
+  background-color: #9cee90;
 }
