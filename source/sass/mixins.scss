@@ -37,44 +37,44 @@
   }
 }
 
-@mixin line($height, $color) {
-  position: absolute;
-  right: -50%;
-  left: -50%;
-  z-index: -1;
-
-  height: $height;
-
-  background-color: $color;
-
-  content: "";
-}
-
-@mixin arrow {
-  position: absolute;
-  top: 50%;
-  right: 2px;
-
-  display: block;
-  width: 10px;
-  height: 10px;
-  margin-top: -10px;
-
-  border: solid $black;
-  border-width: 0 2px 2px 0;
-
-  transform: rotate(45deg);
-  transform-origin: 50% 50% 0;
-
-  transition: all 500ms;
-
-  content: "";
-}
-
-@mixin arrow-top {
-  &::before {
-    margin-top: 0;
-
-    transform: rotate(-135deg);
-  }
-}
+// @mixin line($height, $color) {
+//   position: absolute;
+//   right: -50%;
+//   left: -50%;
+//   z-index: -1;
+//
+//   height: $height;
+//
+//   background-color: $color;
+//
+//   content: "";
+// }
+//
+// @mixin arrow {
+//   position: absolute;
+//   top: 50%;
+//   right: 2px;
+//
+//   display: block;
+//   width: 10px;
+//   height: 10px;
+//   margin-top: -10px;
+//
+//   border: solid $black;
+//   border-width: 0 2px 2px 0;
+//
+//   transform: rotate(45deg);
+//   transform-origin: 50% 50% 0;
+//
+//   transition: all 500ms;
+//
+//   content: "";
+// }
+//
+// @mixin arrow-top {
+//   &::before {
+//     margin-top: 0;
+//
+//     transform: rotate(-135deg);
+//   }
+// }

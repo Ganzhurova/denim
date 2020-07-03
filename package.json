@@ -31,7 +31,7 @@
     "webpack-stream": "^5.2.1"
   },
   "scripts": {
-    "lint": "eslint \"source/js/**/*\" --fix",
+    "lint": "eslint \"source/es6/**/*\" --fix",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\"",
     "test": "npm run editorconfig && npm run stylelint",
@@ -47,7 +47,7 @@
     "*.json",
     "*.js",
     "source/*.html",
-    "source/js/**/*.js",
+    "source/es6/**/*.js",
     "source/img/**/*.svg",
     "source/sass/**/*.{sass,scss}"
   ],
