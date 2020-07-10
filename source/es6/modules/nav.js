@@ -1,60 +1,55 @@
+// import Animation from "./Animation";
+// import MediaQuery from "./MediaQuery";
+
 const navMenu = () => {
   const navButton = document.querySelector(".nav__toggle");
+  // const navList = document.querySelector(".nav__list");
   const nav = document.querySelector(".nav");
+  // const mediaQuery = new MediaQuery("mobile");
+  // const classes = navListDropdown.classList;
+  // console.log(navListDropdown);
+  // console.log(classes);
+  //
+  // if (!navButton || !navListDropdown) {
+  //   return;
+  // }
+  //
+  // const animatedEl = new Animation(navListDropdown, 200);
+  //
+  // function init(e) {
+  //   if (e.matches) {
+  //     animatedEl.animationInit();
+  //   } else {
+  //     document.querySelector(classes).removeAttribute("style");
+  //     // for (let i = 0; i < classes.length; i += 1) {
+  //     //   const classItem = document.querySelector(`.${classes[i]}`);
+  //     //   if (
+  //     //     classItem.classList.contains(".nav__list--inner-mobile") &&
+  //     //     classItem.hasAttribute("style")
+  //     //   ) {
+  //     //     classItem.removeAttribute("style");
+  //     //   }
+  //     //   console.log(classItem);
+  //     // }
+  //     // navList.removeAttribute("style");
+  //   }
+  // }
+  //
+  // mediaQuery.mql.addListener(init);
+  // init(mediaQuery.mql);
 
-  const elem = document.querySelector(".nav__list--inner");
-  const elemStyle = getComputedStyle(elem);
-
-  const elHeight = `${elem.clientHeight}px`;
-  const elPaddingTop = elemStyle.paddingTop;
-  const elPaddingBottom = elemStyle.paddingBottom;
-  const elVisibility = "visible";
-  const elOverflow = "visible";
-
-  console.log(elHeight);
-  console.log(elPaddingTop);
-  console.log(elPaddingBottom);
-
-  const elHeightDefault = 0;
-  const elPaddingTopDefault = 0;
-  const elPaddingBottomDefault = 0;
-  const elVisibilityDefault = "hidden";
-  const elOverflowDefault = "hidden";
-
-  elem.style.height = elHeightDefault;
-  elem.style.paddingTop = elPaddingTopDefault;
-  elem.style.paddingBottom = elPaddingBottomDefault;
-  elem.style.visibility = elVisibilityDefault;
-  elem.style.overflow = elOverflowDefault;
-
-  function onTransitionEnd() {
-    elem.style.overflow = elOverflow;
-  }
-
-  console.log(elHeight);
-  console.log(elPaddingTop);
-  console.log(elPaddingBottom);
-
-  navButton.addEventListener("click", () => {
-    if (nav.classList.contains("nav--closed")) {
-      nav.classList.remove("nav--closed");
-      nav.classList.add("nav--opened");
-
-      elem.style.height = elHeight;
-      elem.style.paddingTop = elPaddingTop;
-      elem.style.paddingBottom = elPaddingBottom;
-      elem.style.visibility = elVisibility;
-      elem.addEventListener("transitionend", onTransitionEnd, false);
+  navButton.addEventListener("click", e => {
+    if (e.target) {
+      e.preventDefault();
+    }
+    if (nav.classList.contains("nav--active")) {
+      nav.classList.remove("nav--active");
+      // navButton.classList.add("nav__toggle--opened");
+      // animatedEl.show();
     } else {
-      nav.classList.add("nav--closed");
-      nav.classList.remove("nav--opened");
-
-      elem.removeEventListener("transitionend", onTransitionEnd, false);
-      elem.style.height = elHeightDefault;
-      elem.style.paddingTop = elPaddingTopDefault;
-      elem.style.paddingBottom = elPaddingBottomDefault;
-      elem.style.visibility = elVisibilityDefault;
-      elem.style.overflow = elOverflowDefault;
+      nav.classList.add("nav--active");
+      // navButton.classList.remove("nav__toggle--opened");
+      // animatedEl.hide();
     }
   });
 };
