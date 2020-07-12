@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+
+  background-color: $white;
+}
+
+.header__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  margin-right: -50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.header__navbar {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  min-height: 67px;
+}
+
+.header__nav,
+.header__user-nav {
+  width: calc(50% - 53px);
+}
+
+.header__nav {
+  margin-right: auto;
+}
+
+.main {
+  height: 400px;
+
+  background-color: #9cee90;
+}

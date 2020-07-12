@@ -3,7 +3,12 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
-@import "blocks/header.scss";
+
+@import "layout/header.scss";
+@import "layout/header-index.scss";
+@import "layout/navigation.scss";
+@import "layout/navigation-index.scss";
+
 @import "blocks/logo.scss";
-@import "blocks/nav.scss";
-@import "blocks/user-nav.scss";
+@import "blocks/user-navigation.scss";
+@import "blocks/overlay.scss";

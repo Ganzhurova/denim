@@ -1,0 +1,22 @@
+.index {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    position: static;
+
+    width: auto;
+    max-height: none;
+    padding: 0;
+    overflow: visible;
+
+    background-color: $lightgrey;
+
+    visibility: visible;
+  }
+
+  .nav__item {
+    transform: translateY(0);
+  }
+}

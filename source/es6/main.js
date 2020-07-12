@@ -1,3 +1,3 @@
-import navMenu from "./modules/nav";
+import bindModal from "./modules/modals";
 
-navMenu();
+bindModal();
