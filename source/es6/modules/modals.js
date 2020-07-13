@@ -16,6 +16,10 @@ const bindModal = () => {
     overlay.classList.toggle("overlay--active");
   }
 
+  if (!navButton) {
+    return;
+  }
+
   if (window.location.pathname.indexOf(pathException) === -1) {
     navButton.addEventListener("click", e => {
       if (e.target) {

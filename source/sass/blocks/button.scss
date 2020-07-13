@@ -1,0 +1,15 @@
+.button {
+  display: block;
+  padding: 23px 10px;
+
+  color: $white;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: center;
+
+  background-color: $black;
+
+  border: 0;
+  cursor: pointer;
+  @include bold;
+}

@@ -1,12 +1,8 @@
 .index {
   .header {
-    min-width: 320px;
-    min-height: 656px;
+    padding-bottom: 50px;
 
     background-color: $lightgrey;
-    background-image: url("../img/header/header-img-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom 307px center;
   }
 
   .header__logo {
@@ -28,11 +24,14 @@
 
     @media (min-width: $tablet-width) {
       position: static;
+
+      height: 67px;
     }
   }
 
   .header__navbar {
     margin-top: 57px;
+    margin-bottom: 10px;
 
     @media (min-width: $tablet-width) {
       margin-top: auto;

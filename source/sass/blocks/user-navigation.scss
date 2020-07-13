@@ -7,6 +7,11 @@
 
 .user-nav__item {
   margin-left: 25px;
+  padding: 5px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 35px;
+  }
 
   &:hover,
   &:active,
@@ -33,6 +38,11 @@
   height: 16px;
 
   background-image: url("../img/user-nav/search-icon.svg");
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .user-nav__link--basket {
@@ -40,4 +50,9 @@
   height: 16px;
 
   background-image: url("../img/user-nav/basket-icon.svg");
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 18px;
+  }
 }

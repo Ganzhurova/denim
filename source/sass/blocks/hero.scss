@@ -1,0 +1,63 @@
+.hero__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero__title {
+  height: 74px;
+  margin: 0;
+  margin-bottom: 40px;
+
+  background-image: url("../img/hero/denim.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 199px 74px;
+}
+
+.hero__slogan {
+  order: -1;
+  margin: 0;
+  margin-bottom: 12.5px;
+
+  color: $text-light;
+
+  font-size: 18px;
+  text-align: center;
+
+  @include regular;
+}
+
+.hero__button {
+  width: 204px;
+  margin: 0 auto;
+}
+
+.hero__img {
+  flex-shrink: 0;
+  order: -1;
+  width: 242px;
+  height: 289px;
+  margin: 0 auto;
+  margin-bottom: 26.5px;
+
+  background-image: url("../img/hero/hero-img-mobile@1x.jpg"),
+    url("../img/hero/diagonal-top.png"), url("../img/hero/diagonal-bottom.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center center, top left, bottom right;
+  background-size: 202px 249px, 109px 80px, 109px 80px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero/hero-img-mobile@2x.jpg"),
+      url("../img/hero/diagonal-top.png"),
+      url("../img/hero/diagonal-bottom.png");
+  }
+}

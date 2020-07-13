@@ -9,7 +9,7 @@ body {
   color: $text-dark;
   font-style: normal;
 
-  background-color: #5f9ea0;
+  background-color: #5f9ea0; //черновой
 
   @include medium;
 }
@@ -47,4 +47,9 @@ input[type="radio"].visually-hidden {
   width: 90%;
   min-width: 290px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 88%;
+    min-width: 678px;
+  }
 }
