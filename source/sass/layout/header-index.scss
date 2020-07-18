@@ -3,6 +3,14 @@
     padding-bottom: 50px;
 
     background-color: $lightgrey;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 42px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 18px;
+    }
   }
 
   .header__logo {
@@ -14,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     height: 57px;
     margin-right: auto;
 
@@ -31,15 +39,29 @@
 
   .header__navbar {
     margin-top: 57px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
     @media (min-width: $tablet-width) {
       margin-top: auto;
+      margin-bottom: 56.5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      align-items: flex-start;
+      margin-bottom: 18.5px;
     }
   }
 
   .header__nav,
   .header__user-nav {
     width: auto;
+  }
+
+  .header__social {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
 }

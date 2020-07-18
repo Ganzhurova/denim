@@ -12,12 +12,6 @@
   @media (min-width: $tablet-width) {
     margin-left: 35px;
   }
-
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: 0.5;
-  }
 }
 
 .user-nav__link {
@@ -28,9 +22,15 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 100% 100%;
 
   @include interaction(-10px);
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .user-nav__link--search {

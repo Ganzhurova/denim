@@ -12,4 +12,10 @@
   border: 0;
   cursor: pointer;
   @include bold;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
 }

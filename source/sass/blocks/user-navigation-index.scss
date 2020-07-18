@@ -1,0 +1,14 @@
+.index {
+  .user-nav__list {
+    @media (min-width: $desktop-width) {
+      flex-direction: column-reverse;
+      padding-top: 45px;
+    }
+  }
+
+  .user-nav__item {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 25px;
+    }
+  }
+}

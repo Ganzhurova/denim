@@ -1,6 +1,15 @@
 .index {
   .nav {
     padding: 15px 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 30px 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 35px;
+      padding-bottom: 0;
+    }
   }
 
   .nav__list {
@@ -14,9 +23,26 @@
     background-color: $lightgrey;
 
     visibility: visible;
+
+    @media (min-width: $desktop-width) {
+      flex-direction: column;
+    }
   }
 
   .nav__item {
     transform: translateY(0);
+
+    @media (min-width: $desktop-width) {
+      margin-right: 0;
+      margin-bottom: 5px;
+      padding-right: 35px;
+    }
+  }
+
+  .nav__sub {
+    @media (min-width: $desktop-width) {
+      top: 0;
+      left: 100%;
+    }
   }
 }
