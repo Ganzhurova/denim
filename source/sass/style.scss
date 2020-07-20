@@ -4,15 +4,18 @@
 @import "mixins.scss";
 @import "global.scss";
 
-@import "layout/header.scss";
-@import "layout/header-index.scss";
-@import "layout/navigation.scss";
-@import "layout/navigation-index.scss";
-
 @import "blocks/logo.scss";
 @import "blocks/user-navigation.scss";
 @import "blocks/user-navigation-index.scss";
 @import "blocks/overlay.scss";
 @import "blocks/hero.scss";
 @import "blocks/button.scss";
-@import "Blocks/social.scss";
+@import "blocks/social.scss";
+@import "blocks/social-header.scss";
+@import "blocks/breadcrumbs.scss";
+
+@import "layout/header.scss";
+@import "layout/header-index.scss";
+@import "layout/navigation.scss";
+@import "layout/navigation-index.scss";
+@import "layout/catalog.scss";

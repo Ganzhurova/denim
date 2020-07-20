@@ -1,0 +1,40 @@
+.social-header {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.social-header__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column-reverse;
+  }
+}
+
+.social-header__list {
+  margin-left: auto;
+}
+
+.social-header__item {
+  margin-left: 35px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 29px;
+
+    text-align: right;
+  }
+}
+
+.social-header__link {
+  display: block;
+
+  color: $text-dark;
+  font-size: 14px;
+}

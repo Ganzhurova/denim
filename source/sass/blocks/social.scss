@@ -68,34 +68,3 @@
 
   background-image: url("../img/social/twitter-icon.svg");
 }
-
-.social--header {
-  display: flex;
-
-  .social__list {
-    display: none;
-    margin-left: auto;
-
-    @media (min-width: $tablet-width) {
-      display: flex;
-    }
-
-    @media (min-width: $desktop-width) {
-      flex-direction: column-reverse;
-    }
-  }
-
-  .social__item {
-    display: block;
-    width: auto;
-    height: auto;
-    margin-right: 0;
-    margin-left: 35px;
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 29px;
-
-      text-align: right;
-    }
-  }
-}

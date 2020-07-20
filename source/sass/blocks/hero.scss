@@ -101,11 +101,16 @@
   margin: 0 auto;
   margin-bottom: 46.5px;
 
+  background-color: $black;
+
   background-image: url("../img/hero/hero-img@1x.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
-  border-color: $black;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero/hero-img@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     position: absolute;

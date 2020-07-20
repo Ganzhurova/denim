@@ -1,0 +1,51 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @include reset-list;
+}
+
+.breadcrumbs__item {
+  font-size: 18px;
+
+  &--current {
+    color: $text-dark;
+  }
+
+  &:first-child {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: list-item;
+    }
+  }
+
+  &:not(:last-child) {
+    position: relative;
+
+    margin-right: 29px;
+
+    &::after {
+      position: absolute;
+      right: -19px;
+      bottom: 0;
+
+      color: $text-light;
+
+      content: "/";
+    }
+  }
+}
+
+.breadcrumbs__link {
+  display: block;
+
+  color: $text-light;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+}

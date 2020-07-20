@@ -1,0 +1,133 @@
+.catalog {
+  min-width: 320px;
+
+  background-color: $white;
+}
+
+.catalog__header {
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    background-color: $lightgrey;
+  }
+}
+
+.catalog__header-wrapper {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    max-width: 770px;
+  }
+}
+
+.catalog__header-content {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 11.5px;
+  padding-bottom: 26.5px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin-right: 15px;
+    padding-top: 75.5px;
+    padding-bottom: 74.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 69.5px;
+    padding-bottom: 64px;
+  }
+}
+
+.catalog__title {
+  display: none;
+  margin: 0;
+
+  font-size: 28px;
+  @include bold;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 125%;
+  }
+}
+
+.catalog__breadcrumbs {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 26.5px;
+  }
+}
+
+.catalog__header-img {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    flex-shrink: 0;
+    width: 294px;
+    height: 260px;
+
+    background-color: $grey;
+
+    background-image: url("../img/catalog/bg-catalog@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/catalog/bg-catalog@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 299px;
+  }
+
+  &::before,
+  &::after {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      z-index: -1;
+
+      display: block;
+
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      content: "";
+    }
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      top: 0;
+      right: -30px;
+
+      width: 232px;
+      height: 176px;
+
+      background-image: url("../img/catalog/diagonal-top.png");
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      bottom: 0;
+      left: -30px;
+
+      width: 178px;
+      height: 135px;
+
+      background-image: url("../img/catalog/diagonal-bottom.png");
+    }
+  }
+}
