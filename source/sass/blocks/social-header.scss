@@ -37,4 +37,10 @@
 
   color: $text-dark;
   font-size: 14px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
 }

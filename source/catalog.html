@@ -116,180 +116,234 @@
           </div>
         </header>
         <div class="catalog__wrapper container">
-          <a class="catalog__filter-button" href="#">Filter by</a>
+          <div class="catalog__filter">
+            <a class="catalog__filter-button" href="#">Filter by</a>
 
-          <section class="filter">
-            <form
-              class="filter__form"
-              method="get"
-              action="https://echo.htmlacademy.ru"
-              autocomplete="off"
-            >
-              <header class="filter__header">
-                <h2 class="filter__title">Filters</h2>
-                <button
-                  class="filter__button filter__button--reset"
-                  type="reset"
-                >
-                  Clear all
-                </button>
-                <button
-                  class="filter__button filter__button--close"
-                  type="button"
-                >
-                  Close
-                </button>
-              </header>
-              <ul class="filter__list">
-                <li class="filter__item">
-                  <span class="filter__subject">Price</span>
-                  <div class="filter__content">
-                    <div class="filter__scale">
-                      <div class="filter__bar"></div>
+            <section class="filter">
+              <form
+                class="filter__form"
+                method="get"
+                action="https://echo.htmlacademy.ru"
+                autocomplete="off"
+              >
+                <header class="filter__header">
+                  <h2 class="filter__title">Filters</h2>
+                  <button
+                    class="filter__button filter__button--reset"
+                    type="reset"
+                  >
+                    Clear all
+                  </button>
+                  <button
+                    class="filter__button filter__button--close"
+                    type="button"
+                  >
+                    Close
+                  </button>
+                </header>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <span class="filter__subject">Price</span>
+                    <div class="filter__content">
+                      <div class="filter__range">
+                        <div class="filter__range-wrapper">
+                          <div class="filter__range-scale">
+                            <div class="filter__range-bar"></div>
+                          </div>
+                          <div
+                            class="filter__range-handle filter__range-handle--min"
+                          >
+                            <div
+                              class="filter__range-marker"
+                              tabindex="0"
+                            ></div>
+                            <span class="filter__range-output">40</span>
+                          </div>
+                          <div
+                            class="filter__range-handle filter__range-handle--max"
+                          >
+                            <div
+                              class="filter__range-marker"
+                              tabindex="0"
+                            ></div>
+                            <span class="filter__range-output">240</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="filter__marker filter__marker--min"></div>
-                    <div class="filter__marker filter__marker--max"></div>
-                  </div>
-                </li>
-                <li class="filter__item">
-                  <span class="filter__subject">Color</span>
-                  <fieldset class="filter__content">
-                    <ul class="filter__colors" role="none">
-                      <li class="filter__color">
-                        <input
-                          id="bluegrey"
-                          type="radio"
-                          name="color"
-                          value="bluegrey"
-                        />
-                        <label for="bluegrey">
-                          <span class="bluegrey"></span>
-                        </label>
-                      </li>
-                      <li class="filter__color">
-                        <input
-                          id="darkblue"
-                          type="radio"
-                          name="color"
-                          value="darkblue"
-                        />
-                        <label for="darkblue">
-                          <span class="darkblue"></span>
-                        </label>
-                      </li>
-                      <li class="filter__color">
-                        <input
-                          id="grey"
-                          type="radio"
-                          name="color"
-                          value="grey"
-                        />
-                        <label for="grey">
-                          <span class="grey"></span>
-                        </label>
-                      </li>
-                      <li class="filter__color">
-                        <input
-                          id="black"
-                          type="radio"
-                          name="color"
-                          value="black"
-                        />
-                        <label for="black">
-                          <span class="black"></span>
-                        </label>
-                      </li>
-                      <li class="filter__color">
-                        <input
-                          id="lightgrey"
-                          type="radio"
-                          name="color"
-                          value="lightgrey"
-                        />
-                        <label for="lightgrey">
-                          <span class="lightgrey"></span>
-                        </label>
-                      </li>
-                      <li class="filter__color">
-                        <input
-                          id="blue"
-                          type="radio"
-                          name="color"
-                          value="blue"
-                        />
-                        <label for="blue">
-                          <span class="blue"></span>
-                        </label>
-                      </li>
-                    </ul>
-                  </fieldset>
-                </li>
-                <li class="filter__item">
-                  <span class="filter__subject">Collection</span>
-                  <fieldset class="filter__content">
-                    <ul class="filter__collections">
-                      <li class="filter__collection">
-                        <input
-                          id="casual"
-                          type="radio"
-                          name="collection"
-                          value="casual"
-                        />
-                        <label for="casual">
-                          <span>Casual</span>
-                        </label>
-                      </li>
-                      <li class="filter__collection">
-                        <input
-                          id="petite"
-                          type="radio"
-                          name="collection"
-                          value="petite"
-                        />
-                        <label for="petite">
-                          <span>Petite</span>
-                        </label>
-                      </li>
-                      <li class="filter__collection">
-                        <input
-                          id="classic"
-                          type="radio"
-                          name="collection"
-                          value="classic"
-                        />
-                        <label for="classic">
-                          <span>Classic</span>
-                        </label>
-                      </li>
-                      <li class="filter__collection">
-                        <input
-                          id="soulluxe"
-                          type="radio"
-                          name="collection"
-                          value="soulluxe"
-                        />
-                        <label for="soulluxe">
-                          <span>Soulluxe</span>
-                        </label>
-                      </li>
-                    </ul>
-                  </fieldset>
-                </li>
-              </ul>
-              <footer class="filter__footer">
-                <button class="button filter__apply" type="submit">
-                  Apply (<span class="filter__count">9</span> products)
-                </button>
-                <button
-                  class="filter__button filter__button--reset"
-                  type="reset"
-                >
-                  Clear all
-                </button>
-              </footer>
-            </form>
-          </section>
-          <ul class="catalog__list"></ul>
+                  </li>
+                  <li class="filter__item">
+                    <span class="filter__subject">Color</span>
+                    <fieldset class="filter__content">
+                      <ul class="filter__colors" role="none">
+                        <li class="filter__color">
+                          <input
+                            id="bluegrey"
+                            class="filter__color-input visually-hidden"
+                            type="radio"
+                            name="color"
+                            value="bluegrey"
+                          />
+                          <label class="filter__color-pic" for="bluegrey">
+                            <span class="bluegrey"></span>
+                          </label>
+                        </li>
+                        <li class="filter__color">
+                          <input
+                            id="darkblue"
+                            class="filter__color-input visually-hidden"
+                            type="radio"
+                            name="color"
+                            value="darkblue"
+                          />
+                          <label class="filter__color-pic" for="darkblue">
+                            <span class="darkblue"></span>
+                          </label>
+                        </li>
+                        <li class="filter__color">
+                          <input
+                            id="grey"
+                            class="filter__color-input visually-hidden"
+                            type="radio"
+                            name="color"
+                            value="grey"
+                          />
+                          <label class="filter__color-pic" for="grey">
+                            <span class="grey"></span>
+                          </label>
+                        </li>
+                        <li class="filter__color">
+                          <input
+                            id="black"
+                            class="filter__color-input visually-hidden"
+                            type="radio"
+                            name="color"
+                            value="black"
+                          />
+                          <label class="filter__color-pic" for="black">
+                            <span class="black"></span>
+                          </label>
+                        </li>
+                        <li class="filter__color">
+                          <input
+                            id="lightgrey"
+                            class="filter__color-input visually-hidden"
+                            type="radio"
+                            name="color"
+                            value="lightgrey"
+                          />
+                          <label class="filter__color-pic" for="lightgrey">
+                            <span class="lightgrey"></span>
+                          </label>
+                        </li>
+                        <li class="filter__color">
+                          <input
+                            id="blue"
+                            class="filter__color-input visually-hidden"
+                            type="radio"
+                            name="color"
+                            value="blue"
+                          />
+                          <label class="filter__color-pic" for="blue">
+                            <span class="blue"></span>
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </li>
+                  <li class="filter__item">
+                    <span class="filter__subject">Collection</span>
+                    <fieldset class="filter__content">
+                      <ul class="filter__collections">
+                        <li class="filter__collection">
+                          <input
+                            id="casual"
+                            class="filter__collection-input visually-hidden"
+                            type="radio"
+                            name="collection"
+                            value="casual"
+                          />
+                          <label
+                            class="filter__collection-category"
+                            for="casual"
+                          >
+                            <span>Casual</span>
+                          </label>
+                        </li>
+                        <li class="filter__collection">
+                          <input
+                            id="petite"
+                            class="filter__collection-input visually-hidden"
+                            type="radio"
+                            name="collection"
+                            value="petite"
+                          />
+                          <label
+                            class="filter__collection-category"
+                            for="petite"
+                          >
+                            <span>Petite</span>
+                          </label>
+                        </li>
+                        <li class="filter__collection">
+                          <input
+                            id="classic"
+                            class="filter__collection-input visually-hidden"
+                            type="radio"
+                            name="collection"
+                            value="classic"
+                          />
+                          <label
+                            class="filter__collection-category"
+                            for="classic"
+                          >
+                            <span>Classic</span>
+                          </label>
+                        </li>
+                        <li class="filter__collection">
+                          <input
+                            id="soulluxe"
+                            class="filter__collection-input visually-hidden"
+                            type="radio"
+                            name="collection"
+                            value="soulluxe"
+                          />
+                          <label
+                            class="filter__collection-category"
+                            for="soulluxe"
+                          >
+                            <span>Soulluxe</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </li>
+                </ul>
+                <footer class="filter__footer">
+                  <button class="button filter__apply" type="submit">
+                    Apply (<span class="filter__count">9</span> products)
+                  </button>
+                  <button
+                    class="filter__button filter__button--reset"
+                    type="reset"
+                  >
+                    Clear all
+                  </button>
+                </footer>
+              </form>
+            </section>
+          </div>
+          <ul class="catalog__list">
+            <li class="catalog__item">1</li>
+            <li class="catalog__item">2</li>
+            <li class="catalog__item">3</li>
+            <li class="catalog__item">4</li>
+            <li class="catalog__item catalog__item--big">5</li>
+            <li class="catalog__item">6</li>
+            <li class="catalog__item">7</li>
+            <li class="catalog__item">8</li>
+            <li class="catalog__item">9</li>
+          </ul>
         </div>
       </section>
     </main>
