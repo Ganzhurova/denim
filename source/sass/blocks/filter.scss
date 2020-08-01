@@ -63,6 +63,16 @@
   &--close {
     text-align: right;
   }
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .filter__list {
@@ -75,6 +85,18 @@
   padding: 0 4.7%;
 
   border-bottom: 2px solid $lightgrey;
+
+  &--active {
+    .filter__subject::after {
+      transform: rotate(-135deg);
+    }
+
+    .filter__content {
+      max-height: 20rem;
+
+      visibility: visible;
+    }
+  }
 }
 
 .filter__subject {
@@ -101,16 +123,33 @@
 
     transform: rotate(45deg) translateY(-100%);
 
+    transition: 300ms;
+
     content: "";
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
 .filter__content {
-  // display: none;
+  max-height: 0;
+
   margin: 0;
   padding: 0;
+  overflow: hidden;
 
   border: 0;
+  visibility: hidden;
+
+  transition: all 300ms;
 }
 
 .filter__range {

@@ -1,14 +1,17 @@
 import SwitchElement from "./SwitchElement";
 
 const filter = () => {
+  const filterForm = document.querySelector(".filter__form");
+  console.log(filterForm);
+
   const params = {
     triggerSelector: ".catalog__filter-button",
-    elementSelector: ".filter__form",
+    element: filterForm,
+    // elementSelector: ".filter__form",
     classActive: "filter__form--active",
     closeButtonSelector: ".filter__button--close",
     isListenerOnBody: true
   };
-  console.log(params);
 
   if (!document.querySelector(params.triggerSelector)) {
     return;
@@ -16,7 +19,22 @@ const filter = () => {
 
   const filterInteractive = new SwitchElement();
   filterInteractive.init(params);
-  console.log(filterInteractive);
+
+  const itemParams = {
+    triggerSelector: ".filter__subject",
+    elementSelector: ".filter__item",
+    classActive: "filter__item--active"
+  };
+
+  const filterItems = document.querySelectorAll(itemParams.elementSelector);
+
+  // filterItems.forEach(item => {
+  //   item = new
+  // });
+  const item = new SwitchElement();
+  item.init(itemParams);
+
+  console.log(item);
 };
 
 export default filter;
