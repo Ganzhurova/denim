@@ -1,3 +1,9 @@
-import bindModal from "./modules/modals";
+import polyfill from "./modules/polyfill";
+import navMenu from "./modules/navMenu";
+import filter from "./modules/filter";
 
-bindModal();
+window.addEventListener("DOMContentLoaded", () => {
+  polyfill();
+  navMenu();
+  filter();
+});

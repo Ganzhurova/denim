@@ -10,6 +10,18 @@
   background-color: $white;
 }
 
+.filter__form {
+  display: none;
+}
+
+.filter__form--active {
+  display: block;
+}
+
+.filter--active {
+  display: block;
+}
+
 .filter__header {
   display: flex;
   flex-direction: row;
@@ -42,6 +54,7 @@
   background-color: $white;
 
   border: 0;
+  cursor: pointer;
 
   &--reset {
     text-align: left;
@@ -72,7 +85,7 @@
 
   font-size: 16px;
 
-  transition: all 300ms;
+  cursor: pointer;
 
   &::after {
     position: absolute;
