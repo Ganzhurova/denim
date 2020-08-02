@@ -1,4 +1,5 @@
 import SwitchElement from "./SwitchElement";
+import input from "./input";
 
 const filter = () => {
   if (!document.querySelector(".catalog__filter-button")) {
@@ -35,6 +36,12 @@ const filter = () => {
       itemInteractive.addListenerByEnter();
     }
   }
+
+  input.checkedRadioByEnter(".filter__colors", "filter__color-pic");
+  input.checkedRadioByEnter(
+    ".filter__collections",
+    "filter__collection-category"
+  );
 
   initFilter();
   initFilterFields();

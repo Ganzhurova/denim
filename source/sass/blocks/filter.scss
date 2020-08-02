@@ -269,7 +269,7 @@
   }
 }
 
-.filter__color-input:not(:checked) + .filter__color-pic {
+.filter__color-input:not([checked]) + .filter__color-pic {
   &:hover,
   &:active,
   &:focus {
@@ -277,7 +277,7 @@
   }
 }
 
-.filter__color-input:checked + .filter__color-pic span {
+.filter__color-input[checked] + .filter__color-pic span {
   @each $name, $value in $filter-colors {
     &.#{$name}::after {
       border-color: $value;
@@ -320,7 +320,7 @@
   }
 }
 
-.filter__collection-input:not(:checked) + .filter__collection-category {
+.filter__collection-input:not([checked]) + .filter__collection-category {
   &:hover,
   &:active,
   &:focus {
@@ -328,7 +328,7 @@
   }
 }
 
-.filter__collection-input:checked + .filter__collection-category span {
+.filter__collection-input[checked] + .filter__collection-category span {
   color: $black;
 }
 
