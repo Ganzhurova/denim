@@ -232,6 +232,10 @@
 
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+
   span {
     position: relative;
 
@@ -262,6 +266,14 @@
 
       content: "";
     }
+  }
+}
+
+.filter__color-input:not(:checked) + .filter__color-pic {
+  &:hover,
+  &:active,
+  &:focus {
+    transform: scale(1.25);
   }
 }
 
@@ -296,11 +308,23 @@
 
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+
   span {
     display: block;
 
     color: $grey;
     font-size: 14px;
+  }
+}
+
+.filter__collection-input:not(:checked) + .filter__collection-category {
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.5;
   }
 }
 
