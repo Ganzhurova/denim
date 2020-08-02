@@ -1,13 +1,10 @@
 import SwitchElement from "./SwitchElement";
 
 const filter = () => {
-  const filterForm = document.querySelector(".filter__form");
-  console.log(filterForm);
-
+  // filter initialization
   const params = {
     triggerSelector: ".catalog__filter-button",
-    element: filterForm,
-    // elementSelector: ".filter__form",
+    elementSelector: ".filter__form",
     classActive: "filter__form--active",
     closeButtonSelector: ".filter__button--close",
     isListenerOnBody: true
@@ -20,21 +17,21 @@ const filter = () => {
   const filterInteractive = new SwitchElement();
   filterInteractive.init(params);
 
+  // initialization of filter fields
   const itemParams = {
-    triggerSelector: ".filter__subject",
-    elementSelector: ".filter__item",
     classActive: "filter__item--active"
   };
 
-  const filterItems = document.querySelectorAll(itemParams.elementSelector);
+  const numberItems = document.querySelectorAll(".filter__item").length;
 
-  // filterItems.forEach(item => {
-  //   item = new
-  // });
-  const item = new SwitchElement();
-  item.init(itemParams);
+  for (let i = 0; i < numberItems; i += 1) {
+    const num = i + 1;
+    itemParams.elementSelector = `.filter__item:nth-child(${num})`;
+    itemParams.triggerSelector = `.filter__item:nth-child(${num}) .filter__subject`;
 
-  console.log(item);
+    const itemInteractive = new SwitchElement();
+    itemInteractive.init(itemParams);
+  }
 };
 
 export default filter;

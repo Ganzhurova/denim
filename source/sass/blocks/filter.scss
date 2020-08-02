@@ -88,11 +88,13 @@
 
   &--active {
     .filter__subject::after {
+      right: 0;
+
       transform: rotate(-135deg);
     }
 
     .filter__content {
-      max-height: 20rem;
+      max-height: 10rem;
 
       visibility: visible;
     }
