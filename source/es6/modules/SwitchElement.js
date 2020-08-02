@@ -27,6 +27,14 @@ class SwitchElement {
     }
   }
 
+  toggleElement() {
+    if (!this.element.classList.contains(this.classActive)) {
+      this.showElement();
+    } else {
+      this.closeElement();
+    }
+  }
+
   bodyClickHandler(e) {
     if (e.target === this.trigger) {
       return;
@@ -41,12 +49,7 @@ class SwitchElement {
       if (e.target) {
         e.preventDefault();
       }
-
-      if (!this.element.classList.contains(this.classActive)) {
-        this.showElement();
-      } else {
-        this.closeElement();
-      }
+      this.toggleElement();
     });
 
     if (this.closeButton) {
@@ -60,11 +63,14 @@ class SwitchElement {
     }
   }
 
-  // addClosureOnBody() {
-  //   document.body.addEventListener("click", e => {
-  //     this.bodyClickHandler(e);
-  //   });
-  // }
+  addListenerByEnter() {
+    const enterKeyCode = 13;
+    this.trigger.addEventListener("keydown", e => {
+      if (e.keyCode === enterKeyCode) {
+        this.toggleElement();
+      }
+    });
+  }
 }
 
 export default SwitchElement;
