@@ -17,7 +17,12 @@ const navMenu = () => {
     navInteractive.init(params);
   }
 
+  function initNavItem() {
+    const itemParams = {};
+  }
+
   initNav();
+  initNavItem();
 };
 
 export default navMenu;

@@ -37,14 +37,14 @@ const filter = () => {
     }
   }
 
+  initFilter();
+  initFilterFields();
+
   input.checkedRadioByEnter(".filter__colors", "filter__color-pic");
   input.checkedRadioByEnter(
     ".filter__collections",
     "filter__collection-category"
   );
-
-  initFilter();
-  initFilterFields();
 };
 
 export default filter;

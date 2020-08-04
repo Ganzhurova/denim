@@ -7,9 +7,10 @@ class SwitchElement {
     this.trigger = document.querySelector(params.triggerSelector);
     this.elementSelector = params.elementSelector;
     this.element = document.querySelector(params.elementSelector);
-    this.classActive = params.classActive;
-    this.closeButton = this.element.querySelector(params.closeButtonSelector);
-    this.isListenerOnBody = params.isListenerOnBody;
+    this.classActive = params.classActive || false;
+    this.closeButton =
+      this.element.querySelector(params.closeButtonSelector) || false;
+    this.isListenerOnBody = params.isListenerOnBody || false;
     this.manage();
   }
 
