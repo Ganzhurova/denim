@@ -1,6 +1,10 @@
+import keyCode from "./keyCode";
+
 class SwitchElement {
   constructor() {
     this.bodyClickHandler = this.bodyClickHandler.bind(this);
+    this.bodyPressEnterHandler = this.bodyPressEnterHandler.bind(this);
+    this.escPressHandler = this.escPressHandler.bind(this);
   }
 
   init(params) {
@@ -8,28 +12,69 @@ class SwitchElement {
     this.elementSelector = params.elementSelector;
     this.element = document.querySelector(params.elementSelector);
     this.classActive = params.classActive || false;
-    this.closeButton =
-      this.element.querySelector(params.closeButtonSelector) || false;
+    if (params.closeButtonSelector) {
+      this.closeButton = this.element.querySelector(params.closeButtonSelector);
+    } else {
+      this.closeButton = false;
+    }
     this.isListenerOnBody = params.isListenerOnBody || false;
+    this.elementDisplay = params.display || false;
+    this.isClosedByEsc = params.isClosedByEsc || false;
     this.manage();
   }
 
   closeElement() {
-    this.element.classList.remove(this.classActive);
+    if (this.classActive) {
+      this.element.classList.remove(this.classActive);
+    }
+
+    if (this.elementDisplay) {
+      this.element.removeAttribute("style");
+    }
+
     if (this.isListenerOnBody) {
       document.body.removeEventListener("click", this.bodyClickHandler);
+      document.body.removeEventListener("keydown", this.bodyPressEnterHandler);
+    }
+
+    if (this.isClosedByEsc) {
+      document.removeEventListener("keydown", this.escPressHandler);
     }
   }
 
   showElement() {
-    this.element.classList.add(this.classActive);
+    if (this.classActive) {
+      this.element.classList.add(this.classActive);
+    }
+
+    if (this.elementDisplay) {
+      this.element.style.display = this.elementDisplay;
+    }
+
     if (this.isListenerOnBody) {
       document.body.addEventListener("click", this.bodyClickHandler);
+      document.body.addEventListener("keydown", this.bodyPressEnterHandler);
+    }
+
+    if (this.isClosedByEsc) {
+      document.addEventListener("keydown", this.escPressHandler);
     }
   }
 
+  selectToggle() {
+    let condition;
+
+    if (this.classActive) {
+      condition = !this.element.classList.contains(this.classActive);
+    } else if (this.elementDisplay) {
+      condition = !this.element.hasAttribute("style");
+    }
+
+    return condition;
+  }
+
   toggleElement() {
-    if (!this.element.classList.contains(this.classActive)) {
+    if (this.selectToggle()) {
       this.showElement();
     } else {
       this.closeElement();
@@ -41,6 +86,18 @@ class SwitchElement {
       return;
     }
     if (!e.target.closest(this.elementSelector)) {
+      this.closeElement();
+    }
+  }
+
+  bodyPressEnterHandler(e) {
+    if (e.keyCode === keyCode.enter) {
+      this.bodyClickHandler(e);
+    }
+  }
+
+  escPressHandler(e) {
+    if (e.keyCode === keyCode.esc) {
       this.closeElement();
     }
   }
@@ -65,9 +122,11 @@ class SwitchElement {
   }
 
   addListenerByEnter() {
-    const enterKeyCode = 13;
     this.trigger.addEventListener("keydown", e => {
-      if (e.keyCode === enterKeyCode) {
+      if (e.keyCode === keyCode.enter) {
+        if (e.target) {
+          e.preventDefault();
+        }
         this.toggleElement();
       }
     });

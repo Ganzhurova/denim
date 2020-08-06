@@ -12,7 +12,8 @@ const filter = () => {
       elementSelector: ".filter__form",
       classActive: "filter__form--active",
       closeButtonSelector: ".filter__button--close",
-      isListenerOnBody: true
+      isListenerOnBody: true,
+      isClosedByEsc: true
     };
 
     const filterInteractive = new SwitchElement();
